@@ -1,0 +1,43 @@
+Goals of the Project:
+
+searchAPI
+
+1.Write a test plan for the documented iTunes Search API
+
+Link for document: https://github.com/iappsqainterview/searchAPI/blob/master/API.md
+
+2.Write Java automation that will make requests to this API:
+Include TestNG or JUnit classes with validations for the documented functional test cases
+
+Tools Used:
+
+Java: Programming language
+JUnit: Unit testing framework for java
+Git: To save and manage test scripts on version updates and changes.
+Maven: Build automation tool primarily used for java projects.It describes how software is built and its dependencies.
+JUnit SureFire: Used to generate test reports where team members can act accordingly.
+Eclipse IDE for developing the Framework
+JSON libraries
+
+Test Cases:
+
+1. Test if the response contains given parameter key value pair as {"artistName":"Alicia keys"} matches in all the results
+   - Pass the url : url1=https://itunes.apple.com/search?term=alicia from the property file to the test function
+   - Get JSON response and store it in a array
+   - Parse through the array to find if  {"artistName":"Alicia keys"} contains in all the indexes of the array
+   - Assert if true on each iteration. If false report failure.
+   Expected : Test Failure 
+   
+2. Test if the result count is 0 , when the parameter key 'Term' is not added in the url
+   - Pass the url : url2=https://itunes.apple.com/search?country=US&media=music&limit=10
+   - Assert if array length is 0. If greater than 0 report failure.
+   Expected : Test Passed  
+   
+3.Test if all parameter key and value pairs match
+   - Pass the url : url3=https://itunes.apple.com/search?term=zootopia&country=US&media=movie&limit=1
+   - Get JSON response and store it in a array
+   - Parse through the array to find if  {"trackName":"zootopia"}, {"country":"US"}, {"kind":"movie"} contains in all the indexes of the array 
+   - Test if array length is equal to limit value: 10.
+   - Assert all the condition. If even one condition fails, report failure
+   - Assert if true on each iteration. If false report failure.
+  Expected : Test Passed  

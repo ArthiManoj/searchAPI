@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.394 sec <<< FAILURE! - in TestSuite
+testTerm on testTerm(com.apple.test.apple.ApiTest)(com.apple.test.apple.ApiTest)  Time elapsed: 0.73 sec  <<< FAILURE!
+java.lang.AssertionError: All results are not matched expected:<true> but was:<false>
+	at com.apple.test.apple.ApiTest.testTerm(ApiTest.java:35)
+
